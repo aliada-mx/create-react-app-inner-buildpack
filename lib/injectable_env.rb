@@ -2,8 +2,8 @@
 require 'json'
 
 class InjectableEnv
-  DefaultVarMatcher = /^REACT_APP_/
-  Placeholder = /\{\{REACT_APP_VARS_AS_JSON_*?\}\}/
+  DefaultVarMatcher = /^TANDEM_APP_/
+  Placeholder = /\{\{TANDEM_APP_VARS_AS_JSON_*?\}\}/
 
   def self.create(var_matcher=DefaultVarMatcher)
     vars = ENV.find_all {|name,value| var_matcher===name }
